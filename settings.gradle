@@ -1,0 +1,4 @@
+rootProject.name = 'agent-mapper'
+include 'agent'
+include 'service'
+
