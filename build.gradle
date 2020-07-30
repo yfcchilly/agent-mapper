@@ -87,8 +87,6 @@ project(":agent") {
             include(dependency("net.bytebuddy:byte-buddy:$byteBuddyVersion"))
             include(dependency("net.bytebuddy:byte-buddy-agent:$byteBuddyVersion"))
         }
-
-        relocate 'com.alibaba', 'com.pdd.paas.wormhole.agent.alibaba'
         exclude 'mozilla/public-suffix-list.txt'
     }
 

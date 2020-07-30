@@ -27,9 +27,9 @@ public class AgentBoot {
                 .ignore(ElementMatchers.nameStartsWith("net.bytebuddy"));
 
         // it work well
-//        agentBuilder = agentBuilder.type(CommonUtils.typeDef("com.ng.service.manager.TestManager"))
-//                .transform(new CustomTransformer(CommonInterceptor.class,
-//                        CommonUtils.methodDef(Arrays.asList("sayHello"), false)));
+        agentBuilder = agentBuilder.type(CommonUtils.typeDef("com.ng.service.manager.TestManager"))
+                .transform(new CustomTransformer(CommonInterceptor.class,
+                        CommonUtils.methodDef(Arrays.asList("sayHello"), false)));
 
         // this will throw NoSuchMethodException
         agentBuilder = agentBuilder.type(CommonUtils.typeDef("com.ng.service.mapper.UserMapper"))
